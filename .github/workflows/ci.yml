@@ -24,6 +24,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run basic check
+    - name: Run basic tests
       run: |
-        echo "Hello from Umesh's CI pipeline"
+        pytest
