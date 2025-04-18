@@ -27,3 +27,7 @@ jobs:
     - name: Run basic tests
       run: |
         pytest
+      
+    - name: Build Docker image
+      run: |
+        docker build -t umesh-docker-image .
