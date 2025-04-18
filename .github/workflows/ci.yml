@@ -31,3 +31,10 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t umesh-docker-image .
+
+    - name: Run Docker Container
+      run: |
+        docker run -d -p 5000:5000 --name my-flask-app umesh-docker-image
+        sleep 5
+        docker ps
+        docker logs my-flask-app
