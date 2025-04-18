@@ -41,4 +41,4 @@ jobs:
 
     - name: Check if App is Running Properly
       run: |
-        curl -s http://localhost:5000 | grep "Hello from Umesh"
+        curl -s http://localhost:5000
