@@ -38,3 +38,7 @@ jobs:
         sleep 5
         docker ps
         docker logs my-flask-app
+
+    - name: Check if App is Running Properly
+      run: |
+        curl -s http://localhost:5000 | grep "Hello from Umesh's DevOps app!"
