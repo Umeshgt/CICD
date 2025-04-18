@@ -41,4 +41,11 @@ jobs:
 
     - name: Check if App is Running Properly
       run: |
-        curl -s http://localhost:5000 grep "Hello from Umesh"
+        RESPONSE=$(curl -s http://localhost:5000)
+        echo "$RESPONSE"
+        if [[ "$RESPONSE" == *"Hello from Umesh"* ]]; then
+          echo "✅ App is working!"
+        else
+          echo "❌ App response incorrect!"
+          exit 1
+        fi
